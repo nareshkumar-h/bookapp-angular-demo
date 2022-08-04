@@ -22,6 +22,7 @@ import { BookStatusComponent } from './book-status/book-status.component';
 import { AuthModule } from './auth/auth.module';
 import { BookModule } from './book/book.module';
 import { OrderModule } from './order/order.module';
+import { BookSidebarComponent } from './book-sidebar/book-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OrderModule } from './order/order.module';
     YearPipe,
     HeaderComponent,    
     RatingComponent,
-    BookStatusComponent
+    BookStatusComponent,
+    BookSidebarComponent
   ],
   imports: [
     BrowserModule,
