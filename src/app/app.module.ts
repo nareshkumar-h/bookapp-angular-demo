@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { ListOrdersComponent } from './list-orders/list-orders.component';
+import { LoginComponent } from './login/login.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ListOrdersComponent } from './list-orders/list-orders.component';
     PricePipe,
     YearPipe,
     HeaderComponent,
-    ListOrdersComponent
+    ListOrdersComponent,
+    LoginComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,

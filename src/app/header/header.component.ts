@@ -12,4 +12,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  logout(){
+    alert("Successfully Logged Out");
+    localStorage.clear();
+    window.location.href="/auth/login";
+  }
 }
