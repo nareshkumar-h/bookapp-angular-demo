@@ -31,7 +31,8 @@ export class ListOrdersComponent implements OnInit {
       id: order.id,
       status:"DELIVERED"
     };
-    
+
+      //Task: Best Practice: Use orderService methods 
     this.http.patch(url, orderObj).subscribe ((res:any)=>{
       console.log(res);
       alert("Order status changed to delivered - " + order.id);
@@ -40,6 +41,7 @@ export class ListOrdersComponent implements OnInit {
 
   }
 
+  //Task: Best Practice: Use orderService methods
   cancelOrder(order:any){
     
     const url ="http://localhost:3000/orders/" + order.id;

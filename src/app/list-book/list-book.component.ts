@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book/book.service';
 
 @Component({
   selector: 'app-list-book',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListBookComponent implements OnInit {
 
-  constructor(private http: HttpClient) { 
+  //@Autowired
+  //BookService bookService; 
+
+
+  constructor(private http: HttpClient, private bookService:BookService) { 
     console.log("ListBookComponent constructor");
   }
 
@@ -22,8 +27,10 @@ export class ListBookComponent implements OnInit {
   title:string = "";
 
   getBooks(){
-    const url = "http://localhost:3000/books";
-    this.http.get(url).subscribe ( (res:any)=>{
+    //const url = "http://localhost:3000/books";
+    //this.http.get(url).subscribe ( (res:any)=>{
+      
+      this.bookService.getAllBooks().subscribe( (res:any)=>{
       console.log(res);
       this.books = res;
     });

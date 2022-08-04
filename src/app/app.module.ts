@@ -17,26 +17,29 @@ import { HeaderComponent } from './header/header.component';
 import { ListOrdersComponent } from './list-orders/list-orders.component';
 import { LoginComponent } from './login/login.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { RatingComponent } from './rating/rating.component';
+import { BookStatusComponent } from './book-status/book-status.component';
+import { AuthModule } from './auth/auth.module';
+import { BookModule } from './book/book.module';
+import { OrderModule } from './order/order.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AddBookComponent,
-    ListBookComponent,
-    ViewBookComponent,
-    EditBookComponent,
+    AppComponent,    
     TitlePipe,
     AuthorPipe,
     PricePipe,
     YearPipe,
-    HeaderComponent,
-    ListOrdersComponent,
-    LoginComponent,
-    MyOrdersComponent
+    HeaderComponent,    
+    RatingComponent,
+    BookStatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
+    BookModule,
+    OrderModule,
     FormsModule,
     HttpClientModule
   ],

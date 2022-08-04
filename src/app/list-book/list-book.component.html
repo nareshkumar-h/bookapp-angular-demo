@@ -17,9 +17,12 @@
                   <h5 class="card-title">{{book.title}}</h5>
                   <p class="card-text">Author: {{book.author}} <br/>
                      Price: {{book.price | currency:'INR'}} <br/>
-                Published Year: {{book.published_year}} <br/>
-            ISBN: {{book.isbn}} <br/>
-            Stock: {{book.stock}}
+                     Ratings: {{book.ratings}} <br/>
+                     <!-- Ratings: {{book.ratings | number: '1.0-0'}} <br/>
+                     Ratings: {{book.ratings | number: '1.1-1'}} <br/>                      -->
+                    Published Year: {{book.published_year}} <br/>
+                    ISBN: {{book.isbn}} <br/>
+                    Stock: {{book.stock}} <br/>
         </p>
                   <a routerLink="/viewbook/{{book.id}}" class="btn btn-primary">View</a>
                 </div>

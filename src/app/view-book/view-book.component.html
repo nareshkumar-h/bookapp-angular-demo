@@ -11,7 +11,7 @@
             <div class="card-body">
               <h5 class="card-title">{{book.title}}</h5>
               <p class="card-text">Author: {{book.author}} <br/>
-                 Price: {{book.price | currency:'INR'}} <br/>
+                 Price: {{book.price | currency:'INR' : 'symbol' : '1.0-0'}} <br/>
             Published Year: {{book.published_year}} <br/>
         ISBN: {{book.isbn}} <br/>
         
