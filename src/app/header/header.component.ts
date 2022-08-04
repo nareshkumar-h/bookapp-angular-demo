@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,15 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input()
+  projectName!:string;
+
+  @Input()
+  isLoggedIn!:boolean;
+
+  // @Output()
+  // childToParent!:string;
 
   logout(){
     alert("Successfully Logged Out");

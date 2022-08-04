@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     alert("Successfully Loggedin");
     localStorage.setItem("IS_LOGGED_IN", "true");
     localStorage.setItem("ROLE","USER");
+    window.location.href="/books";
   }
 
 
