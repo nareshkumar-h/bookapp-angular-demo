@@ -18,4 +18,10 @@ export class AppComponent  implements OnInit{
     this.isLoggedIn = isLoggedInStr != null? Boolean(isLoggedInStr):false;
 
   }
+
+  //Receives the event from the Child component
+  logout(event:any){
+    console.log(event);
+    this.isLoggedIn = false;
+  }
 }

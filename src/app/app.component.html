@@ -1,8 +1,13 @@
-<!--Parent to Child Component-->
+<!--Parent to Child Component (@Input)-->
+<!--Child to Parent Component (@Output)-->
 <!--Parent: App Component-->
 <!--Child: Header Component-->
-<app-header [projectName]="projectName"
-[isLoggedIn]="isLoggedIn"></app-header>
+<app-header 
+[projectName]="projectName"
+[isLoggedIn]="isLoggedIn"
+(logoutEvent)="logout($event)" >
+
+</app-header>
 <div class="container-fluid">
   <router-outlet></router-outlet> <!--Based on the path, component will get appended here-->
 </div>

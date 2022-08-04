@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +17,7 @@ export class LoginComponent implements OnInit {
     alert("Successfully Loggedin");
     localStorage.setItem("IS_LOGGED_IN", "true");
     localStorage.setItem("ROLE","USER");
+    
     window.location.href="/books";
   }
 

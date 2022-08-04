@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -18,12 +18,14 @@ export class HeaderComponent implements OnInit {
   @Input()
   isLoggedIn!:boolean;
 
-  // @Output()
-  // childToParent!:string;
+  @Output('logoutEvent') outputEvent = new EventEmitter<string>(); 
 
   logout(){
     alert("Successfully Logged Out");
     localStorage.clear();
+
+    //From the Child, send the data to the parent
+    this.outputEvent.emit("logout123");
     window.location.href="/auth/login";
   }
 }
