@@ -13,13 +13,13 @@
       <!-- <input type="radio" name="author" value="Naresh">Naresh <br/>
       <input type="radio" name="author" value="Siva">Siva <br/> -->
       <ng-container *ngFor="let author of authors">
-        <input type="radio" name="author" value="{{author}}">&nbsp; {{author}} <br />
+        <input type="radio" name="author" value="{{author}}" (change)="searchByAuthor(author)">&nbsp; {{author}} <br />
       </ng-container>
     </div>
     <h5>Stock</h5>
     <div>
-       <input type="radio" name="stock" value="AVAILABLE">&nbsp;Available <br/>
-       <input type="radio" name="stock" value="UNAVAILABLE"> &nbsp;Out of Stock <br/>
+       <input type="radio" name="stock" value="AVAILABLE" (change)="searchByStock('AVAILABLE')">&nbsp;Available <br/>
+       <input type="radio" name="stock" value="UNAVAILABLE" (change)="searchByStock('UNAVAILABLE')"> &nbsp;Out of Stock <br/>
     </div>
     <h3>Price</h3>
     <div>

@@ -46,7 +46,19 @@ export class ListBookComponent implements OnInit {
     });
   }
 
+  searchByStock(status:string){
+    console.log("Search By Status:" + status);
+    //todo
+  }
+
+
+  searchByAuthor(author:string){
+    console.log("Search By Author:" + author);
+    //todo
+  }
+
   searchByPrice(){
+    console.log("Search By Price");
     //todo
   }
 
