@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  implements OnInit{
   
-  projectName = "BookApp2";
+  projectName = "BookApp";
   isLoggedIn = false;
   
   constructor(){
@@ -16,6 +16,6 @@ export class AppComponent  implements OnInit{
   ngOnInit(): void {
     let isLoggedInStr = localStorage.getItem("IS_LOGGED_IN");
     this.isLoggedIn = isLoggedInStr != null? Boolean(isLoggedInStr):false;
-    
+
   }
 }
