@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent  implements OnInit{
   
-  projectName = "BookApp ";
+  projectName = "BookApp";
   isLoggedIn = false;
   
   constructor(){
